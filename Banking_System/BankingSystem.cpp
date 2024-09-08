@@ -89,6 +89,37 @@ int main(){
      cout<<"\nYour Account Details\n";
      cout<<acc;
      break;
+     case 3:
+     cout<<"Enter Account Number : ";cin>>accntnum;
+     cout<<"Enter Amount(Deposit) : ";cin>>amt;
+     acc = bnk.Deposit(accntnum,amt);
+     cout<<"\nINR "<<amt<<" Deposited\n";
+     cout<<acc;
+     break;
+     case 4:
+     cout<<"Enter Account Number : ";cin>>accntnum;
+     cout<<"Enter Amount(Withdraw) : ";cin>>amt;
+     acc = bnk.Withdraw(accntnum,amt);
+     cout<<"\nINR "<<amt<<" Withdrawn\n";
+     cout<<acc;
+     break;
+     case 5:
+     cout<<"Enter Account Number : ";cin>>accntnum;
+     bnk.CloseAccount(accntnum);
+     cout<<"\nAccount Number : "<<accntnum<<" has been Closed\n";
+     cout<<"X_X SAD TO SEE YOU LEAVE X_X\n";
+     cout<<acc;
+     break;
+     case 6:
+     bnk.showAllAccounts();
+     break;
+     case 7:
+     break;
+     default:
+      cout<<"Please Enter A Valid Choice";
+      exit(0);
    }
   }while(UserChoice!=7);
+
+  return 0;
 }
